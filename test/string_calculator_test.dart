@@ -20,6 +20,10 @@ void main() {
     test('returns sum of two comma-separated numbers', () {
       expect(calculator.add('1,5'), equals(6));
     });
+
+    test('returns sum of any amount of numbers', () {
+      expect(calculator.add('1,2,3,4,5'), equals(15));
+    });
   });
 }
 
