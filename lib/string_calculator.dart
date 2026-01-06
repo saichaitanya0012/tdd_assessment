@@ -14,7 +14,7 @@ class StringCalculator {
     return parsedNumbers.reduce((a, b) => a + b);
   }
 
-  (String, String) _parseDelimiter(String input) {
+  (String, String) _parseDelimiter(String input) {  
     if (input.startsWith('//')) {
       final delimiterEndIndex = input.indexOf('\n');
       final delimiter = input.substring(2, delimiterEndIndex);
