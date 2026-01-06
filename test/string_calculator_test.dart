@@ -32,6 +32,17 @@ void main() {
     test('supports custom delimiter', () {
       expect(calculator.add('//;\n1;2'), equals(3));
     });
+
+    test('throws exception for negative numbers', () {
+      expect(
+        () => calculator.add('-1,-3'),
+        throwsA(
+          predicate((e) =>
+              e is Exception &&
+              e.toString().contains('negative numbers not allowed -1,-3')),
+        ),
+      );
+    });
   });
 }
 
