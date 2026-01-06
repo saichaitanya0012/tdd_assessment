@@ -28,6 +28,10 @@ void main() {
     test('allows new lines as delimiters', () {
       expect(calculator.add('1\n2,3'), equals(6));
     });
+
+    test('supports custom delimiter', () {
+      expect(calculator.add('//;\n1;2'), equals(3));
+    });
   });
 }
 
