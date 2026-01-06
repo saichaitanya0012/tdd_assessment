@@ -4,7 +4,8 @@ class StringCalculator {
       return 0;
     }
     
-    final parts = numbers.split(',');
+    final normalizedInput = numbers.replaceAll('\n', ',');
+    final parts = normalizedInput.split(',');
     return parts.map(int.parse).reduce((a, b) => a + b);
   }
 }
