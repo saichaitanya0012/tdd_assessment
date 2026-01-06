@@ -12,6 +12,14 @@ void main() {
     test('returns 0 for empty string', () {
       expect(calculator.add(''), equals(0));
     });
+
+    test('returns number for single number string', () {
+      expect(calculator.add('1'), equals(1));
+    });
+
+    test('returns sum of two comma-separated numbers', () {
+      expect(calculator.add('1,5'), equals(6));
+    });
   });
 }
 
